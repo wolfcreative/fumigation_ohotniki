@@ -75,7 +75,7 @@ header{
             max-width:650px;color:#fff;
             
             p.title{
-                font-size:48px;line-height:normal;text-transform:uppercase;
+                font-size:48px;line-height:normal;text-transform:uppercase;color:#fff;
                 @media(max-width:959px){font-size:34px}
                 @media(max-width:639px){font-size:26px}
                 @media(max-width:439px){font-size:22px}
@@ -228,7 +228,7 @@ header{
                 position:absolute;top:12px;right:0;
 
                 .left,.right{background:url(../img/awesome/arrow_review.png) no-repeat center / cover;width:33px;height:21px;display:inline-block}
-                .right{transform: rotate(-180deg)}
+                .right{transform:rotate(-180deg)}
             }
         }
     }
@@ -282,12 +282,27 @@ footer{
 // Advantages
 .advantages{
     .circle{
-        display:inline-block;position:relative;background:#fff;border-radius:100px;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);margin-bottom:14px;padding:20px 23px;
-        &+span{display:block}
+        .wrapper{
+            display:inline-block;position:relative;background:#fff;border-radius:100px;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);margin-bottom:14px;padding:20px 23px;
+            &+span{display:block}
+        }
     }
     &.counting{
         counter-reset:section;
-        .circle:before{counter-increment:section;content:counter(section);background:#fff;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);font:16px 'Gilroy Bold',sans-serif;border-radius:30px;color:$color-red;display:inline-block;position:absolute;top:0;right:0;padding:5px 10px}
+        .circle{
+            >.wrapper{
+                &:before{counter-increment:section;content:counter(section);background:#fff;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);font:16px 'Gilroy Bold',sans-serif;border-radius:30px;color:$color-red;display:inline-block;position:absolute;top:0;right:0;padding:5px 10px}
+            
+                @media(min-width:1240px){&:after{content:'';width:88px;height:22px;background:url(../img/awesome/wave.png) no-repeat;display:inline-block;position:absolute;top:25px;right:-110px}}
+            }
+        }
+        
+        @media(min-width:1240px){
+            .circle:nth-child(even) .wrapper:after{
+                top:70px;transform:rotate(-180deg)
+            }
+            .circle:last-child .wrapper:after{display:none}
+        }
     }
 }
 
