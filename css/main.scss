@@ -1,0 +1,374 @@
+/* Crafted with love by wolfcreative.ru :3 */
+@font-face{font-family:'Gilroy Regular';src:url(../fonts/Gilroy-Regular.eot);src:url(../fonts/Gilroy-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/Gilroy-Regular.woff) format("woff"),url(../fonts/Gilroy-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Gilroy Light';src:url(../fonts/Gilroy-Light.eot);src:url(../fonts/Gilroy-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/Gilroy-Light.woff) format("woff"),url(../fonts/Gilroy-Light.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Gilroy Bold';src:url(../fonts/Gilroy-Bold.eot);src:url(../fonts/Gilroy-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/Gilroy-Bold.woff) format("woff"),url(../fonts/Gilroy-Bold.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'Gilroy Semibold';src:url(../fonts/Gilroy-SemiBold.eot);src:url(../fonts/Gilroy-SemiBold.eot?#iefix) format("embedded-opentype"),url(../fonts/Gilroy-SemiBold.woff) format("woff"),url(../fonts/Gilroy-SemiBold.ttf) format("truetype");font-weight:400;font-style:normal}
+
+%container-padding{
+    padding:70px 0;
+    @media(max-width:959px){padding:50px 0}
+}
+body{
+    margin:0 auto;font-family:'Gilroy Regular',sans-serif;font-size:16px;line-height:24px;color:#111;
+    @media(max-width:959px){font-size:14px;line-height:21px}
+}
+.uk-container{max-width:1170px}
+a{color:#000;transition:.2s ease-in-out}
+a:hover,a:focus{color:#8a8a8a;text-decoration:none;transition:.2s ease-in-out}
+b,strong{font-weight:normal;font-family:'Gilroy Bold',sans-serif}
+sup{font-size:11px}
+@media(min-width:640px){p{font-family:'Gilroy Light',sans-serif;color:#000}}
+
+$color-red:#ff5852;
+
+header{
+    background:#fff;
+
+    @media(max-width:959px){padding:10px 0}
+    @media(min-width:480px){.uk-grid{width:100%}}
+
+    .uk-navbar-nav{
+        >li>a{
+            min-height:98px;color:#000;font:16px 'Gilroy Light',sans-serif;text-transform:none;
+            &:hover,&:focus{background:#ececec}
+
+            @media(min-width:1280px){padding:0 25px}
+            @media(max-width:1279px){font-size:14px}
+        }
+    }
+
+    // Если липкое-меню активно
+    &.uk-active{
+        background:rgba(255,255,255,0.99);box-shadow:0 7px 10px -5px rgba(0,0,0,.1);padding:6px 0;
+
+        .uk-navbar-nav{
+            border:none;
+
+            >li>a{
+                min-height:38px;color:#111;
+            }
+        }
+
+        .uk-grid{width:100%}
+        .uk-navbar-toggle{padding-left:15px}
+
+        @media(max-width:639px){
+            .logo{display:none}
+        }
+    }
+
+    .uk-navbar-toggle{
+        min-height:38px;color:#111;
+        @media(max-width:479px){padding-left:0}
+    }
+
+    .uk-link-red{border-bottom-style:dashed}
+}
+
+.afterhead{
+    .slider{
+        background:url(../img/backgrounds/afterhead.jpg) no-repeat center bottom / cover;padding:90px 0 140px;
+        @media(max-width:959px){padding:70px 0 100px}
+
+
+        .uk-panel{
+            max-width:650px;color:#fff;
+            
+            p.title{
+                font-size:48px;line-height:normal;text-transform:uppercase;
+                @media(max-width:959px){font-size:34px}
+                @media(max-width:639px){font-size:26px}
+                @media(max-width:439px){font-size:22px}
+    
+                b{font-style:italic;color:#ff463f}
+            }
+    
+            .uk-list li{
+                padding-left:30px;position:relative;font:18px 'Gilroy Bold',sans-serif;text-transform:uppercase;margin-bottom:20px;
+                @media(max-width:959px){font-size:16px}
+                @media(max-width:639px){font-size:14px}
+    
+                &:before{content:'';width:15px;height:15px;background:$color-red;box-shadow:0 2px 5px 0px rgba(242, 89, 83, 0.55);border-radius:30px;position:absolute;left:0;top:50%;transform:translateY(-50%)}
+            }
+        }
+    
+        .uk-dotnav{
+            margin-top:55px;
+    
+            a{height:2px;width:50px;border-radius:0}
+        }
+    }
+    .form{
+        margin-top:-87px;
+
+        form{
+            padding:30px 30px 25px;border-radius:6px;
+
+            button{line-height:48px}
+        }
+    }
+}
+
+.sheet{
+    @extend %container-padding;
+
+    .services{
+        .uk-grid{
+            >div{
+                padding:0 2.5px 5px 2.5px;
+
+                img{width:100%}
+                span{background:rgba($color-red, 0.78);color:#fff;font:24px 'Gilroy Bold',sans-serif;text-transform:uppercase;padding:20px 30px}
+            }
+        }
+    }
+}
+
+.stock{
+    @extend %container-padding;
+
+    min-height:420px;background:url(../img/backgrounds/stock.jpg) no-repeat center / cover;overflow:hidden;padding:65px 0 25px;box-sizing:border-box;
+    
+    .info{
+        width:665px;box-sizing:border-box;
+        @media(max-width:1099px){padding:10px 25px}
+        @media(max-width:639px){padding:10px 5px}
+
+        h2,p{color:#111}
+
+        h2{
+            font-size:48px;text-transform:none;
+            @media(max-width:959px){font-size:34px}
+            @media(max-width:639px){font-size:28px}
+        }
+    }
+}
+
+.information{
+    @extend %container-padding;
+
+    .about{
+        @media(min-width:1280px){p{letter-spacing:1.2px}}
+    }
+
+    .useful{
+        p{line-height:20px}
+    }
+}
+
+.questions{
+    @extend %container-padding;
+
+    background:#ccc no-repeat center / cover;
+
+    h2{
+        font-size:48px;text-transform:none;margin:-15px 0 10px;
+        @media(max-width:959px){font-size:34px}
+        @media(max-width:639px){font-size:28px}
+    }
+
+    h2,p{color:#fff}
+
+    p:not(.uk-text-small){
+        font:30px 'Gilroy Regular',sans-serif;
+        @media(max-width:959px){font-size:20px}
+        @media(max-width:439px){font-size:18px}
+
+        strong{color:$color-red}
+    }
+    *+p{margin-top:10px}
+
+    .uk-input{height:57px}
+}
+
+.corner{
+    @extend %container-padding;
+    
+    .deliverance{
+        .uk-grid{
+            >div{
+                padding:0 1.5px 4px 1.5px;
+
+                img{width:100%}
+                span{
+                    font-size:18px;text-align:center;display:block;padding:14px 5px 21px;
+                    @media(max-width:639px){font-size:16px}
+                }
+            }
+        }
+    }
+
+    .partners{
+        .uk-slider-container{padding:10px 20px 20px}
+        .uk-card{box-shadow:0 5px 14px 0 rgba(29, 28, 30, 0.025);border:1px solid #f5f5f5}
+        .uk-dotnav a{width:16px;height:16px}
+    }
+
+    .reviews{
+        .uk-slider-items>li{
+            padding:40px 20px 35px 90px;
+            @media(max-width:959px){padding-top:10px;padding-left:20px}
+
+            .uk-card{
+                padding-top:25px;padding-bottom:35px;padding-right:15px;
+
+                @media(min-width:960px){
+                    padding-left:0;
+                    .avatar{margin-top:-72px;margin-bottom:-72px;margin-left:-90px}
+                }
+                @media(max-width:639px){img{max-width:210px;margin-top:25px}}
+
+                h3{font:24px/normal 'Gilroy Regular',sans-serif;margin-bottom:10px}
+
+                p{color:#000}
+                *+p{margin-top:10px}
+            }
+
+            .control{
+                position:absolute;top:12px;right:0;
+
+                .left,.right{background:url(../img/awesome/arrow_review.png) no-repeat center / cover;width:33px;height:21px;display:inline-block}
+                .right{transform: rotate(-180deg)}
+            }
+        }
+    }
+
+    .contact{
+        .info{
+            p{
+                font-size:18px;
+    
+                b{
+                    font-size:24px;display:block;margin-bottom:15px;
+                    @media(max-width:639px){font-size:21px;margin-bottom:10px}
+                }
+            }
+            @media(min-width:640px){*+p{margin-top:55px}}
+        }
+
+        form{
+            max-width:635px;
+
+            .title{
+                font:30px 'Gilroy Semibold',sans-serif;
+                @media(max-width:959px){font-size:22px}
+                @media(min-width:640px){margin-top:-5px}
+            }
+
+            .uk-input{height:59px}
+        }
+    }
+}
+
+footer{
+    background:#1a1a20;color:#fff;padding:25px 0 18px;
+    
+    .wrapper{
+        border-bottom:1px solid #37373b;padding-bottom:20px;margin-bottom:12px;
+        
+        .uk-navbar-nav{
+            @media(max-width:1199px) and (min-width:960px){margin-left:-15px}
+
+            >li>a{
+                min-height:34px;color:#fff;font:14px 'Gilroy Light',sans-serif;text-transform:none;
+                &:hover,&:focus{background:#343434}
+            }
+        }
+    }
+
+    .privacy>a{font-size:14px;color:#fff}
+}
+
+// Advantages
+.advantages{
+    .circle{
+        display:inline-block;position:relative;background:#fff;border-radius:100px;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);margin-bottom:14px;padding:20px 23px;
+        &+span{display:block}
+    }
+    &.counting{
+        counter-reset:section;
+        .circle:before{counter-increment:section;content:counter(section);background:#fff;box-shadow:0 5px 29px 0 rgba(0, 0, 0, 0.13);font:16px 'Gilroy Bold',sans-serif;border-radius:30px;color:$color-red;display:inline-block;position:absolute;top:0;right:0;padding:5px 10px}
+    }
+}
+
+// Modal with content
+.uk-modal{
+    &.uk-modal-text{
+        .uk-modal-dialog{
+            max-width:1125px!important;width:100%;border-radius:8px;
+
+            hr{border-color:#8f8f92}
+
+            .title{
+                font:30px 'Gilroy Semibold',sans-serif;text-transform:none;
+                @media(max-width:959px){font-size:24px}
+            }
+
+            form{
+                .uk-input{border-color:#8f8f92}
+                p{
+                    font:24px 'Gilroy Regular',sans-serif;
+                    @media(max-width:959px){font-size:20px}
+                }
+            }
+        }
+    }
+}
+
+// Headers
+h2,h3{font-family:'Gilroy Bold',sans-serif;line-height:normal;color:#111;text-transform:uppercase}
+h2{
+    font-size:30px;
+    @media(max-width:959px){font-size:28px}
+    @media(max-width:639px){font-size:26px}
+    @media(max-width:439px){font-size:22px}
+
+    span{font-style:italic;color:$color-red}
+}
+h3{
+    font-size:18px;
+    @media(max-width:439px){font-size:16px}
+}
+
+// Buttons
+.uk-button{
+    border-radius:5px;text-transform:none;
+
+    &.uk-button-ghost{
+        background:transparent url(../img/awesome/phone-ghost.png) no-repeat left 10px center;color:#fff;font:14px/36px 'Gilroy Bold',sans-serif;border:1px solid $color-red;padding:0 15px 0 48px;
+        &:hover,&:focus{background:$color-red;color:#000}
+    }
+    &.uk-button-red{
+        background:$color-red;color:#fff;position:relative;overflow:hidden;font:18px/57px 'Gilroy Bold',sans-serif;padding:0 55px;
+        &:hover,&:focus{background:darken($color-red, 7%)}
+        @media(max-width:639px){padding:0 30px}
+
+        &:before{content:'';display:block;top:-600px;left:0;width:36px;height:700px;background-color:#fff;position:absolute;animation:button_blink 4s infinite}
+    }
+}
+@keyframes button_blink {
+0%{transform:rotate(30deg) translateX(-100px)}
+100%{transform:rotate(30deg) translateX(1600px)}
+}
+
+// Linkss
+.uk-link-red{
+    font-size:16px;line-height:18px;color:#ff5852;text-decoration:none;border-bottom:1px solid #ff5852;display:inline-block;
+    &:hover,&:focus{border:none;color:darken($color-red, 10%);text-decoration:none}
+}
+.uk-link-phone{
+    font:18px 'Gilroy Bold',sans-serif;color:#000;padding-left:23px;background:url(../img/awesome/phone_header.png) no-repeat left center;
+    &:hover,&:focus{color:#333}
+}
+
+// UiKit Replace
+.uk-input{
+    height:48px;border-radius:4px;font-size:18px;border-color:#dcdcdc;
+    @media(min-width:960px){padding-left:25px}
+
+    &::placeholder{color:#222}
+}
+.uk-lightbox{background:rgba(0, 0, 0, 0.9)}
+.uk-modal-title{font-size:26px}
+.uk-dotnav > * > *{width:14px;height:14px;border:none;background:#dcdcdc}
+.uk-dotnav > .uk-active > *{background:$color-red}
